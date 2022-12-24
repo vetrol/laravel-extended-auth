@@ -13,10 +13,6 @@ class UserEmailAddress extends Model implements MustVerifyEmailContract
 {
     use MustVerifyEmail, Notifiable;
 
-    protected $casts = [
-        'is_primary' => 'boolean',
-    ];
-
     protected $guarded = [];
 
     public function user()
