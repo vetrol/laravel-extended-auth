@@ -1,23 +1,26 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "yottahq/laravel-extended-auth",
+    "description": "The missing Laravel authentication features all in one package.",
     "keywords": [
-        ":vendor_name",
+        "yottahq",
         "laravel",
-        ":package_slug"
+        "laravel-extended-auth"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/yottahq/laravel-extended-auth",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": ":YottaHQ Developers",
+            "email": "developers@yottahq.com",
+            "role": "Developer"
+        }, {
+           "name": "Mohamed Hassan",
+            "email": "mo@yottahq.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.1",
-        "spatie/laravel-package-tools": "^1.13.0",
         "illuminate/contracts": "^9.0"
     },
     "require-dev": {
@@ -35,17 +38,15 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "YottaHQ\\LaravelExtendedAuth\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "YottaHQ\\LaravelExtendedAuth\\Tests\\": "tests"
         }
     },
     "scripts": {
-        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
         "analyse": "vendor/bin/phpstan analyse",
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest --coverage",
@@ -61,10 +62,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "YottaHQ\\LaravelExtendedAuth\\LaravelExtendedAuthServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "ExtendedAuth": "YottaHQ\\LaravelExtendedAuth\\Facades\\ExtendedAuth"
             }
         }
     },
