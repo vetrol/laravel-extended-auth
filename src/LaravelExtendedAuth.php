@@ -10,6 +10,11 @@ class LaravelExtendedAuth
 
     public static bool $registersServiceProviders = true;
 
+    public const RECOVERY_CODES_GENERATED = 'recovery-codes-generated';
+    public const TWO_FACTOR_AUTHENTICATION_CONFIRMED = 'two-factor-authentication-confirmed';
+    public const TWO_FACTOR_AUTHENTICATION_DISABLED = 'two-factor-authentication-disabled';
+    public const TWO_FACTOR_AUTHENTICATION_ENABLED = 'two-factor-authentication-enabled';
+
     public static function ignoreRoutes(): static
     {
         static::$registersRoutes = false;

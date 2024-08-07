@@ -11,3 +11,5 @@ Planned features:
 - Advanced 2FA/MFA features
 - Magic links
 - OTP on login, new location
+- Password expiration policy
+- Prevent password reuse
