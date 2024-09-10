@@ -8,16 +8,16 @@ return new class extends Migration
 {
     public function __construct(private string $table)
     {
-        $this->table = config('laravel-extended-auth.user_email_addresses_table', 'user_email_addresses');
+        $this->table = config('laravel-extended-auth.magic_links_table', 'magic_links');
     }
 
     public function up()
     {
         Schema::create($this->table, function (Blueprint $table) {
             $table->id();
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->morphs('emailable');
+            $table->string('token')->unique();
+            $table->timestamp('expires_at');
             $table->timestamps();
         });
     }
