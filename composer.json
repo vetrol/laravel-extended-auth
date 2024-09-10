@@ -12,10 +12,12 @@
         {
             "name": ":YottaHQ Developers",
             "email": "developers@yottahq.com",
+            "homepage": "https://github.com/yottahq",
             "role": "Developer"
         }, {
            "name": "Mohamed Hassan",
             "email": "mo@yottahq.com",
+            "homepage": "https://github.com/m074554n",
             "role": "Developer"
         }
     ],
